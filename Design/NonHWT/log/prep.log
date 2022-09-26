@@ -1,0 +1,12 @@
+Qflow project preparation output log Mon Sep 26 10:32:45 2022
+
+--------------------------------
+Qflow project setup
+--------------------------------
+
+Technology set to osu035_redm4
+Regenerating files for existing project non_active_hwt
+
+No actions specified on command line;
+creating qflow script file ~/Desktop/VLSI-Design/projects/HW_Trojans/NonHWT/qflow_exec.sh only.
+Uncomment lines in this file and source the file to run the flow.

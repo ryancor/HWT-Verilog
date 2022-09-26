@@ -1,0 +1,55 @@
+Starting new log file Mon Sep 26 10:29:34 2022
+
+LEF Read, Line 135: NOTE:  Old format VIARULE ignored.
+--------------------------------
+LEF Read, Line 136: NOTE:  Old format VIARULE ignored.
+Qflow project setup
+LEF Read, Line 140: NOTE:  Old format VIARULE ignored.
+--------------------------------
+LEF Read, Line 141: NOTE:  Old format VIARULE ignored.
+
+LEF Read, Line 151: NOTE:  Old format VIARULE ignored.
+Technology set to osu035 from existing qflow_vars.sh file
+LEF Read, Line 152: NOTE:  Old format VIARULE ignored.
+Regenerating files for existing project hwt
+LEF Read, Line 156: NOTE:  Old format VIARULE ignored.
+Qrouter detail maze router version 1.4.71.T
+LEF Read, Line 157: NOTE:  Old format VIARULE ignored.
+Reading LEF data from file /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef.
+LEF Read, Line 167: NOTE:  Old format VIARULE ignored.
+LEF file:  Defines site corner (ignored)
+LEF Read, Line 168: NOTE:  Old format VIARULE ignored.
+LEF file:  Defines site IO (ignored)
+LEF Read, Line 172: NOTE:  Old format VIARULE ignored.
+LEF file:  Defines site core (ignored)
+LEF Read, Line 173: NOTE:  Old format VIARULE ignored.
+LEF read: Processed 3179 lines.
+LEF Read: encountered 0 errors and 12 warnings total.
+Vertical route layer at non-minimum pitch 3.2.  Using smaller pitch 1.6, will route on 1-of-2 tracks for layer metal4.
+Running vlog2Cel to generate input files for graywolf
+vlog2Cel  -l  /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef -u 100 -o /home/kali/Desktop/VLSI-Design/projects/HW_Trojans/HWT/layout/hwt.cel /home/kali/Desktop/VLSI-Design/projects/HW_Trojans/HWT/synthesis/hwt.rtlnopwr.v
+No hwt.cel1 file found for project. . . no partial blockages to apply to layout.
+No hwt.cel2 file found for project. . . continuing without pin placement hints
+Running GrayWolf placement
+graywolf  hwt
+
+--------------------------------
+Qflow project setup
+--------------------------------
+
+Technology set to osu035 from existing qflow_vars.sh file
+Regenerating files for existing project hwt
+Warning:  No migration logfile found.
+Running netgen
+netgen -batch lvs "hwt.spice hwt" "/home/kali/Desktop/VLSI-Design/projects/HW_Trojans/HWT/synthesis/hwt.spc hwt" /usr/local/share/qflow/tech/osu035/osu035_setup.tcl comp.out -json -blackbox
+NETGEN-6.2-dev
+Developed by Joachim Schoeberl at
+2010-xxxx Vienna University of Technology
+2006-2010 RWTH Aachen University
+1996-2006 Johannes Kepler University Linz
+Including OpenCascade geometry kernel
+Including MPI version 3.1
+optfile ./ng.opt does not exist - using default values
+togl-version : 2
+OCC module loaded
+Errors in synthesis flow, qflow status = 1

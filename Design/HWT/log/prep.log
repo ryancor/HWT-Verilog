@@ -1,0 +1,11 @@
+Qflow project preparation output log Mon Sep 26 10:29:43 2022
+
+--------------------------------
+Qflow project setup
+--------------------------------
+
+Technology set to osu035
+
+No actions specified on command line;
+creating qflow script file ~/Desktop/VLSI-Design/projects/HW_Trojans/HWT/qflow_exec.sh only.
+Uncomment lines in this file and source the file to run the flow.

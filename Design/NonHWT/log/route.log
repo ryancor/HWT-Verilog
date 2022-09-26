@@ -1,0 +1,120 @@
+Qflow route logfile created on Mon Sep 26 10:32:49 AM EDT 2022
+qrouter -noc  -s non_active_hwt.cfg
+Qrouter detail maze router version 1.4.71.T
+Reading LEF data from file /usr/local/share/qflow/tech/osu035_redm4/osu035_redm4_stdcells.lef.
+LEF Read, Line 135: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 136: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 140: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 141: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 151: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 152: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 156: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 157: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 167: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 168: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 172: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 173: NOTE:  Old format VIARULE ignored.
+LEF file:  Defines site corner (ignored)
+LEF file:  Defines site IO (ignored)
+LEF file:  Defines site core (ignored)
+LEF read: Processed 3179 lines.
+LEF Read: encountered 0 errors and 12 warnings total.
+Reading DEF data from file non_active_hwt.def.
+Diagnostic: Design name: "non_active_hwt"
+  Processed 0 vias total.
+  Processed 5 subcell instances total.
+  Processed 5 pins total.
+  Processed 9 nets total (0 fixed).
+DEF read: Processed 73 lines.
+Output scale = microns / 100, precision 1
+No antenna cell defined!
+There are 9 nets in this design.
+*** Running stage1 routing with defaults
+Finished routing net D
+Nets remaining: 8
+Finished routing net _0_
+Nets remaining: 7
+Finished routing net C
+Nets remaining: 6
+Finished routing net _1_
+Nets remaining: 5
+Finished routing net B
+Nets remaining: 4
+Finished routing net A
+Nets remaining: 3
+Finished routing net _2_
+Nets remaining: 2
+Finished routing net _3_
+Nets remaining: 1
+Finished routing net Y
+Nets remaining: 0
+
+----------------------------------------------
+Progress: Stage 1 total routes completed: 9
+No failed routes!
+----------------------------------------------
+*** Running stage3 routing with defaults, 1st round
+Finished routing net D
+Nets remaining: 8
+Finished routing net _0_
+Nets remaining: 7
+Finished routing net C
+Nets remaining: 6
+Finished routing net _1_
+Nets remaining: 5
+Finished routing net B
+Nets remaining: 4
+Finished routing net A
+Nets remaining: 3
+Finished routing net _2_
+Nets remaining: 2
+Finished routing net _3_
+Nets remaining: 1
+Finished routing net Y
+Nets remaining: 0
+
+----------------------------------------------
+Progress: Stage 3 total routes completed: 18
+No failed routes!
+----------------------------------------------
+*** Running stage3 routing with defaults, 2nd round
+Finished routing net D
+Nets remaining: 8
+Finished routing net _0_
+Nets remaining: 7
+Finished routing net C
+Nets remaining: 6
+Finished routing net _1_
+Nets remaining: 5
+Finished routing net B
+Nets remaining: 4
+Finished routing net A
+Nets remaining: 3
+Finished routing net _2_
+Nets remaining: 2
+Finished routing net _3_
+Nets remaining: 1
+Finished routing net Y
+Nets remaining: 0
+
+----------------------------------------------
+Progress: Stage 3 total routes completed: 27
+No failed routes!
+----------------------------------------------
+*** Writing DEF file non_active_hwt_route.def
+----------------------------------------------
+Final: No failed routes!
+----------------------------------------------
+*** Writing RC file non_active_hwt_route.rc
+DEF2Verilog -v /home/kali/Desktop/VLSI-Design/projects/HW_Trojans/NonHWT/synthesis/non_active_hwt.rtlnopwr.v -o /home/kali/Desktop/VLSI-Design/projects/HW_Trojans/NonHWT/synthesis/non_active_hwt_postroute.v
+-p vdd -g gnd  -l  /usr/local/share/qflow/tech/osu035_redm4/osu035_redm4_stdcells.lef non_active_hwt_route.def
+
+Generating RTL verilog and SPICE netlist file in directory
+   /home/kali/Desktop/VLSI-Design/projects/HW_Trojans/NonHWT/synthesis
+Running vlog2Verilog.
+vlog2Verilog -c -v vdd -g gnd -o non_active_hwt.rtl.anno.v non_active_hwt_postroute.v
+vlog2Verilog -c -p -v vdd -g gnd -o non_active_hwt.rtlnopwr.anno.v non_active_hwt_postroute.v
+/usr/local/share/qflow/bin/vlog2Verilog -c -b -p -n -v vdd -g gnd -o non_active_hwt.rtlbb.anno.v non_active_hwt_postroute.v
+Running vlog2Spice.
+vlog2Spice -i -l  /usr/local/share/qflow/tech/osu035_redm4/osu035_stdcells.sp -o non_active_hwt.anno.spc non_active_hwt.rtl.anno.v
+Router script ended on Mon Sep 26 10:32:49 AM EDT 2022

@@ -1,0 +1,50 @@
+Qflow migration logfile created on Mon Sep 26 10:29:48 AM EDT 2022
+magic -dnull -noconsole  migrate_hwt.tcl
+
+Magic 8.3 revision 105 - Compiled on Mon, 06 Dec 2021 22:32:27 +0200.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Input style lambda=0.20(p): scaleFactor=20, multiplier=1
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+4 Magic internal units = 1 Lambda
+Loading "migrate_hwt.tcl" from command line.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )
+
+microns:    0.00 x 0.00    (  0.00,  0.00 ), (  0.00,  0.00 )
+lambda:     0.00 x 0.00    (  0.00,  0.00 ), (  0.00,  0.00 )
+internal:      0 x 0       (     0,  0    ), (     0,  0    )
+Reading LEF data from file /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef.
+This action cannot be undone.
+LEF read, Line 16 (Message): Unknown keyword "OBS" in LEF file; ignoring.
+LEF read, Line 17 (Message): Unknown keyword "PIN" in LEF file; ignoring.
+LEF read: Processed 3179 lines.
+Reading DEF data from file hwt.def.
+This action cannot be undone.
+  Processed 3 vias total.
+  Processed 14 subcell instances total.
+  Processed 7 pins total.
+  Processed 10 nets total.
+DEF read, Line 174 (Warning): Number of nets read (4) does not match the number declared (6).
+DEF read: Processed 176 lines.
+DEF Read: encountered 1 warning total.
+Generating LEF output hwt.lef for cell hwt:
+Diagnostic:  Write LEF header for cell hwt
+Diagnostic:  Writing LEF output for cell hwt
+Diagnostic:  Scale value is 0.050000
+Extracting BUFX2 into BUFX2.ext:
+Extracting AOI21X1 into AOI21X1.ext:
+Extracting INVX1 into INVX1.ext:
+Extracting FILL into FILL.ext:
+Extracting NAND3X1 into NAND3X1.ext:
+Extracting NAND2X1 into NAND2X1.ext:
+Extracting hwt into hwt.ext:
+exttospice finished.
+Migration script ended on Mon Sep 26 10:29:48 AM EDT 2022

@@ -1,0 +1,61 @@
+cell 1 INVX1:_4_
+left -160 right 160 bottom -1000 top 1000
+pin name twfeed1 signal TW_PASS_THRU layer 1 80 -1000
+   equiv name twfeed1 layer 1 80 1000
+pin name A signal D layer 1 -80 -540
+pin name Y signal _0_ layer 1 80 0
+cell 2 INVX1:_5_
+left -160 right 160 bottom -1000 top 1000
+pin name twfeed1 signal TW_PASS_THRU layer 1 80 -1000
+   equiv name twfeed1 layer 1 80 1000
+pin name A signal C layer 1 -80 -540
+pin name Y signal _1_ layer 1 80 0
+cell 3 NAND2X1:_6_
+left -240 right 240 bottom -1000 top 1000
+pin name twfeed1 signal TW_PASS_THRU layer 1 0 -1000
+   equiv name twfeed1 layer 1 0 1000
+pin name twfeed2 signal TW_PASS_THRU layer 1 160 -1000
+   equiv name twfeed2 layer 1 160 1000
+pin name A signal B layer 1 -160 -340
+pin name B signal A layer 1 160 140
+pin name Y signal _2_ layer 1 100 -680
+cell 4 AOI21X1:_7_
+left -320 right 320 bottom -1000 top 1000
+pin name twfeed1 signal TW_PASS_THRU layer 1 -80 -1000
+   equiv name twfeed1 layer 1 -80 1000
+pin name twfeed2 signal TW_PASS_THRU layer 1 80 -1000
+   equiv name twfeed2 layer 1 80 1000
+pin name twfeed3 signal TW_PASS_THRU layer 1 240 -1000
+   equiv name twfeed3 layer 1 240 1000
+pin name A signal _2_ layer 1 -160 -70
+pin name B signal _1_ layer 1 -80 -260
+pin name C signal _0_ layer 1 240 -500
+pin name Y signal _3_ layer 1 80 -680
+cell 5 BUFX2:_8_
+left -240 right 240 bottom -1000 top 1000
+pin name twfeed1 signal TW_PASS_THRU layer 1 0 -1000
+   equiv name twfeed1 layer 1 0 1000
+pin name twfeed2 signal TW_PASS_THRU layer 1 160 -1000
+   equiv name twfeed2 layer 1 160 1000
+pin name A signal _3_ layer 1 -160 -140
+pin name Y signal Y layer 1 170 0
+pad 1 name twpin_A
+corners 4 -80 -200 -80 200 80 200 80 -200
+pin name A signal A layer 1 0 0
+
+pad 2 name twpin_B
+corners 4 -80 -200 -80 200 80 200 80 -200
+pin name B signal B layer 1 0 0
+
+pad 3 name twpin_C
+corners 4 -80 -200 -80 200 80 200 80 -200
+pin name C signal C layer 1 0 0
+
+pad 4 name twpin_D
+corners 4 -80 -200 -80 200 80 200 80 -200
+pin name D signal D layer 1 0 0
+
+pad 5 name twpin_Y
+corners 4 -80 -200 -80 200 80 200 80 -200
+pin name Y signal Y layer 1 0 0
+

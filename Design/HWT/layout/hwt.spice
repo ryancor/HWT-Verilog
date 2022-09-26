@@ -1,0 +1,43 @@
+* NGSPICE file created from hwt.ext - technology: scmos
+
+* Black-box entry subcircuit for FILL abstract view
+.subckt FILL gnd vdd
+.ends
+
+* Black-box entry subcircuit for AOI21X1 abstract view
+.subckt AOI21X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NAND2X1 abstract view
+.subckt NAND2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NAND3X1 abstract view
+.subckt NAND3X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for INVX1 abstract view
+.subckt INVX1 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for BUFX2 abstract view
+.subckt BUFX2 A gnd Y vdd
+.ends
+
+.subckt hwt gnd vdd A B C D Y
+XSFILL3120x100 gnd vdd FILL
+XSFILL3280x100 gnd vdd FILL
+XSFILL2800x100 gnd vdd FILL
+X_9_ _9_/A _9_/B _9_/C gnd _9_/Y vdd AOI21X1
+XSFILL1200x100 gnd vdd FILL
+X_8_ D _8_/B gnd _9_/C vdd NAND2X1
+XSFILL2960x100 gnd vdd FILL
+X_7_ B A C gnd _8_/B vdd NAND3X1
+X_5_ C gnd _9_/A vdd INVX1
+XSFILL1360x100 gnd vdd FILL
+X_6_ B A gnd _9_/B vdd NAND2X1
+XSFILL1520x100 gnd vdd FILL
+XSFILL1680x100 gnd vdd FILL
+X_10_ _9_/Y gnd Y vdd BUFX2
+.ends
+

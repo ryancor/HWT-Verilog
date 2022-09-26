@@ -1,0 +1,48 @@
+Qflow migration logfile created on Mon Sep 26 10:32:50 AM EDT 2022
+magic -dnull -noconsole  migrate_non_active_hwt.tcl
+
+Magic 8.3 revision 105 - Compiled on Mon, 06 Dec 2021 22:32:27 +0200.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Input style lambda=0.20(p): scaleFactor=20, multiplier=1
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+4 Magic internal units = 1 Lambda
+Loading "migrate_non_active_hwt.tcl" from command line.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )
+
+microns:    0.00 x 0.00    (  0.00,  0.00 ), (  0.00,  0.00 )
+lambda:     0.00 x 0.00    (  0.00,  0.00 ), (  0.00,  0.00 )
+internal:      0 x 0       (     0,  0    ), (     0,  0    )
+Reading LEF data from file /usr/local/share/qflow/tech/osu035_redm4/osu035_redm4_stdcells.lef.
+This action cannot be undone.
+LEF read, Line 16 (Message): Unknown keyword "OBS" in LEF file; ignoring.
+LEF read, Line 17 (Message): Unknown keyword "PIN" in LEF file; ignoring.
+LEF read: Processed 3179 lines.
+Reading DEF data from file non_active_hwt.def.
+This action cannot be undone.
+DEF read, Line 14 (Error): END statement out of context.
+  Processed 5 subcell instances total.
+  Processed 5 pins total.
+  Processed 9 nets total.
+  Processed 1 special nets total.
+DEF read: Processed 108 lines.
+DEF Read: encountered 1 error total.
+Generating LEF output non_active_hwt.lef for cell non_active_hwt:
+Diagnostic:  Write LEF header for cell non_active_hwt
+Diagnostic:  Writing LEF output for cell non_active_hwt
+Diagnostic:  Scale value is 0.050000
+Extracting NAND2X1 into NAND2X1.ext:
+Extracting BUFX2 into BUFX2.ext:
+Extracting AOI21X1 into AOI21X1.ext:
+Extracting INVX1 into INVX1.ext:
+Extracting non_active_hwt into non_active_hwt.ext:
+exttospice finished.
+Migration script ended on Mon Sep 26 10:32:50 AM EDT 2022

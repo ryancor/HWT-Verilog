@@ -1,0 +1,73 @@
+VERSION 5.6 ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN non_active_hwt ;
+UNITS DISTANCE MICRONS 100 ;
+
+DIEAREA ( -480 0 ) ( 2880 2200 ) ;
+
+TRACKS Y 0 DO 12 STEP 200 LAYER metal1 ;
+TRACKS X -480 DO 22 STEP 160 LAYER metal2 ;
+TRACKS Y 0 DO 12 STEP 200 LAYER metal3 ;
+TRACKS X -480 DO 22 STEP 160 LAYER metal4 ;
+
+VIAS 0 ;
+END VIAS
+
+COMPONENTS 5 ;
+- _6_ NAND2X1 + PLACED ( 80 100 ) FS ;
+- _8_ BUFX2 + PLACED ( 560 100 ) S ;
+- _7_ AOI21X1 + PLACED ( 1040 100 ) FS ;
+- _5_ INVX1 + PLACED ( 1680 100 ) S ;
+- _4_ INVX1 + PLACED ( 2000 100 ) S ;
+END COMPONENTS
+
+PINS 5 ;
+- A + NET A
+  + LAYER metal3 ( -30 -30 ) ( 30 30 )
+  + PLACED ( -320 600 ) N ;
+- B + NET B
+  + LAYER metal3 ( -30 -30 ) ( 30 30 )
+  + PLACED ( -320 1400 ) N ;
+- C + NET C
+  + LAYER metal3 ( -30 -30 ) ( 30 30 )
+  + PLACED ( 2720 1000 ) N ;
+- D + NET D
+  + LAYER metal3 ( -30 -30 ) ( 30 30 )
+  + PLACED ( 2720 600 ) N ;
+- Y + NET Y
+  + LAYER metal3 ( -30 -30 ) ( 30 30 )
+  + PLACED ( -320 1000 ) N ;
+END PINS
+
+NETS 9 ;
+- D
+  ( PIN D ) 
+  ( _4_ A ) ;
+- _0_
+  ( _7_ C ) 
+  ( _4_ Y ) ;
+- C
+  ( PIN C ) 
+  ( _5_ A ) ;
+- _1_
+  ( _7_ B ) 
+  ( _5_ Y ) ;
+- B
+  ( PIN B ) 
+  ( _6_ A ) ;
+- A
+  ( PIN A ) 
+  ( _6_ B ) ;
+- _2_
+  ( _7_ A ) 
+  ( _6_ Y ) ;
+- _3_
+  ( _8_ A ) 
+  ( _7_ Y ) ;
+- Y
+  ( PIN Y ) 
+  ( _8_ Y ) ;
+END NETS
+
+END DESIGN

@@ -1,0 +1,87 @@
+magic
+tech scmos
+magscale 1 2
+timestamp 1664164346
+<< metal1 >>
+rect 221 157 236 163
+rect -12 137 19 143
+rect 164 137 179 143
+rect 29 117 44 123
+rect 44 84 52 88
+<< m2contact >>
+rect 156 156 164 164
+rect 188 156 196 164
+rect 204 156 212 164
+rect 236 156 244 164
+rect -20 136 -12 144
+rect 60 136 68 144
+rect 124 136 132 144
+rect 156 136 164 144
+rect 44 116 52 124
+rect 92 116 100 124
+rect 108 116 116 124
+rect 140 116 148 124
+rect 44 76 52 84
+<< metal2 >>
+rect 61 104 67 136
+rect 93 104 99 116
+rect 141 104 147 116
+rect 189 104 195 156
+rect 45 64 51 76
+rect 237 64 243 156
+<< m3contact >>
+rect 156 156 164 164
+rect 204 156 212 164
+rect -20 136 -12 144
+rect 124 136 132 144
+rect 156 136 164 144
+rect 44 116 52 124
+rect 108 116 116 124
+rect 60 96 68 104
+rect 92 96 100 104
+rect 140 96 148 104
+rect 188 96 196 104
+rect 44 56 52 64
+rect 236 56 244 64
+<< metal3 >>
+rect 164 157 204 163
+rect -35 137 -20 143
+rect 132 137 156 143
+rect 52 117 108 123
+rect -35 97 60 103
+rect 100 97 140 103
+rect 196 97 275 103
+rect -35 57 44 63
+rect 244 57 275 63
+use INVX1  _4_
+timestamp 1664164346
+transform -1 0 232 0 -1 210
+box -4 -6 36 206
+use INVX1  _5_
+timestamp 1664164346
+transform -1 0 200 0 -1 210
+box -4 -6 36 206
+use AOI21X1  _7_
+timestamp 1664164346
+transform 1 0 104 0 -1 210
+box -4 -6 68 206
+use BUFX2  _8_
+timestamp 1664164346
+transform -1 0 104 0 -1 210
+box -4 -6 52 206
+use NAND2X1  _6_
+timestamp 1664164346
+transform 1 0 8 0 -1 210
+box -4 -6 52 206
+<< labels >>
+flabel metal3 s -35 57 -29 63 7 FreeSans 24 0 0 0 A
+port 0 nsew
+flabel metal3 s -35 137 -29 143 7 FreeSans 24 0 0 0 B
+port 1 nsew
+flabel metal3 s 269 97 275 103 3 FreeSans 24 0 0 0 C
+port 2 nsew
+flabel metal3 s 269 57 275 63 3 FreeSans 24 0 0 0 D
+port 3 nsew
+flabel metal3 s -35 97 -29 103 7 FreeSans 24 0 0 0 Y
+port 4 nsew
+<< end >>

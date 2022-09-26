@@ -1,0 +1,176 @@
+VERSION 5.6 ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN hwt ;
+UNITS DISTANCE MICRONS 100 ;
+
+DIEAREA ( -480 0 ) ( 4960 2600 ) ;
+
+TRACKS Y 0 DO 14 STEP 200 LAYER metal1 ;
+TRACKS X -480 DO 35 STEP 160 LAYER metal2 ;
+TRACKS Y 0 DO 14 STEP 200 LAYER metal3 ;
+TRACKS X -480 DO 35 STEP 160 LAYER metal4 ;
+
+
+VIAS 3 ;
+- M2_M1_post
++ RECT metal1 ( -290 -40 ) ( 290 40 )
++ RECT via1 ( 230 -20 ) ( 270 20 )
++ RECT via1 ( 130 -20 ) ( 170 20 )
++ RECT via1 ( 30 -20 ) ( 70 20 )
++ RECT via1 ( -70 -20 ) ( -30 20 )
++ RECT via1 ( -170 -20 ) ( -130 20 )
++ RECT via1 ( -270 -20 ) ( -230 20 )
++ RECT metal2 ( -290 -40 ) ( 290 40 ) ;
+- M3_M2_post
++ RECT metal2 ( -290 -40 ) ( 290 40 )
++ RECT via2 ( 230 -20 ) ( 270 20 )
++ RECT via2 ( 130 -20 ) ( 170 20 )
++ RECT via2 ( 30 -20 ) ( 70 20 )
++ RECT via2 ( -70 -20 ) ( -30 20 )
++ RECT via2 ( -170 -20 ) ( -130 20 )
++ RECT via2 ( -270 -20 ) ( -230 20 )
++ RECT metal3 ( -290 -40 ) ( 290 40 ) ;
+- M4_M3_post
++ RECT metal3 ( -300 -60 ) ( 300 60 )
++ RECT via3 ( 220 -20 ) ( 260 20 )
++ RECT via3 ( 100 -20 ) ( 140 20 )
++ RECT via3 ( -20 -20 ) ( 20 20 )
++ RECT via3 ( -140 -20 ) ( -100 20 )
++ RECT via3 ( -260 -20 ) ( -220 20 )
++ RECT metal4 ( -300 -60 ) ( 300 60 ) ;
+END VIAS
+
+COMPONENTS 14 ;
+- _6_ NAND2X1 + PLACED ( 80 100 ) FS ;
+- _7_ NAND3X1 + PLACED ( 560 100 ) FS ;
+- _5_ INVX1 + PLACED ( 1840 100 ) FS ;
+- _9_ AOI21X1 + PLACED ( 2160 100 ) FS ;
+- _8_ NAND2X1 + PLACED ( 3440 100 ) S ;
+- _10_ BUFX2 + PLACED ( 3920 100 ) FS ;
+- SFILL1200x100 FILL + PLACED ( 1200 100 ) S ;
+- SFILL1360x100 FILL + PLACED ( 1360 100 ) S ;
+- SFILL1520x100 FILL + PLACED ( 1520 100 ) S ;
+- SFILL1680x100 FILL + PLACED ( 1680 100 ) S ;
+- SFILL2800x100 FILL + PLACED ( 2800 100 ) S ;
+- SFILL2960x100 FILL + PLACED ( 2960 100 ) S ;
+- SFILL3120x100 FILL + PLACED ( 3120 100 ) S ;
+- SFILL3280x100 FILL + PLACED ( 3280 100 ) S ;
+END COMPONENTS
+
+PINS 7 ;
+- gnd + NET gnd
+  + LAYER metal4 ( -320 -50 ) ( 320 50 )
+  + PLACED ( 3040 -50 ) N ;
+- vdd + NET vdd
+  + LAYER metal4 ( -320 -50 ) ( 320 50 )
+  + PLACED ( 1440 -50 ) N ;
+- A + NET A
+  + LAYER metal3 ( -30 -30 ) ( 30 30 )
+  + PLACED ( -320 600 ) N ;
+- B + NET B
+  + LAYER metal3 ( -30 -30 ) ( 30 30 )
+  + PLACED ( -320 1000 ) N ;
+- C + NET C
+  + LAYER metal2 ( -30 -30 ) ( 30 30 )
+  + PLACED ( 2080 2600 ) N ;
+- D + NET D
+  + LAYER metal3 ( -30 -30 ) ( 30 30 )
+  + PLACED ( 4800 1000 ) N ;
+- Y + NET Y
+  + LAYER metal3 ( -30 -30 ) ( 30 30 )
+  + PLACED ( 4800 600 ) N ;
+END PINS
+
+NETS 10 ;
+- _4_
+  ( _9_ Y ) 
+  ( _10_ A ) 
++ ROUTED metal1 ( 2720 1200 ) M2_M1 
+  NEW metal2 ( 2720 1200 ) M3_M2 
+  NEW metal3 ( 2720 1200 ) ( 3840 * ) M3_M2 
+  NEW metal1 ( 3840 1200 ) M2_M1 
+  NEW metal1 ( 3840 1200 ) ( 4000 * ) ;
+- Y
+  ( PIN Y ) 
+  ( _10_ Y ) 
++ ROUTED metal3 ( 4800 600 ) ( 4480 * ) M3_M2 
+  NEW metal1 ( 4480 600 ) M2_M1 
+  NEW metal1 ( 4480 600 ) ( 4320 * ) ;
+- C
+  ( PIN C ) 
+  ( _7_ C ) 
+  ( _5_ A ) 
++ ROUTED metal2 ( 2080 2600 ) ( 1920 * ) ( * 1600 ) M2_M1 
+  NEW metal1 ( 960 800 ) M2_M1 
+  NEW metal2 ( 960 800 ) ( * 1200 ) M3_M2 
+  NEW metal3 ( 960 1200 ) ( 1920 * ) M3_M2 
+  NEW metal2 ( 1920 1200 ) ( * 1600 ) ;
+- _0_
+  ( _9_ A ) 
+  ( _5_ Y ) 
++ ROUTED metal1 ( 2240 1200 ) ( 2080 * ) ;
+- B
+  ( PIN B ) 
+  ( _7_ A ) 
+  ( _6_ A ) 
++ ROUTED metal3 ( -319 1000 ) ( 160 * ) M3_M2 
+  NEW metal2 ( 160 1000 ) ( * 1400 ) M2_M1 
+  NEW metal1 ( 640 1000 ) M2_M1 
+  NEW metal2 ( 640 1000 ) M3_M2 
+  NEW metal3 ( 640 1000 ) ( 160 * ) ;
+- A
+  ( PIN A ) 
+  ( _7_ B ) 
+  ( _6_ B ) 
++ ROUTED metal1 ( 800 1200 ) M2_M1 
+  NEW metal2 ( 800 1200 ) ( * 800 ) M2_M1 
+  NEW metal1 ( 800 800 ) ( 480 * ) ( * 850 ) 
+  NEW metal3 ( -319 600 ) ( 800 * ) M3_M2 
+  NEW metal2 ( 800 600 ) ( * 800 ) ;
+- _1_
+  ( _9_ B ) 
+  ( _6_ Y ) 
++ ROUTED metal1 ( 2400 1400 ) ( 2240 * ) M2_M1 
+  NEW metal2 ( 2240 1400 ) M3_M2 
+  NEW metal3 ( 2240 1400 ) ( 480 * ) M3_M2 
+  NEW metal1 ( 480 1400 ) M2_M1 
+  NEW metal1 ( 480 1400 ) ( 320 * ) ;
+- _2_
+  ( _8_ B ) 
+  ( _7_ Y ) 
++ ROUTED metal1 ( 3520 1000 ) M2_M1 
+  NEW metal2 ( 3520 1000 ) M3_M2 
+  NEW metal3 ( 3520 1000 ) ( 1920 * ) M3_M2 
+  NEW metal1 ( 1920 1000 ) M2_M1 
+  NEW metal1 ( 1920 1000 ) ( 1120 * ) ;
+- D
+  ( PIN D ) 
+  ( _8_ A ) 
++ ROUTED metal3 ( 4800 1000 ) ( 4000 * ) M3_M2 
+  NEW metal2 ( 4000 1000 ) ( * 1400 ) ( 3840 * ) M2_M1 ;
+- _3_
+  ( _9_ C ) 
+  ( _8_ Y ) 
++ ROUTED metal1 ( 2720 1600 ) ( 3520 * ) ( 3610 * ) ;
+END NETS
+
+SPECIALNETS 6 ;
+- A
++ ROUTED metal1 80 ( 480 770 ) ( * 880 ) ;
+- _3_
+;
+
+- gnd
++ FIXED metal3 120 ( 3040 2100 ) ( * * ) M4_M3_post
+  NEW metal2 120 ( 3040 2100 ) ( * * ) M3_M2_post
+  NEW metal1 120 ( 3040 2100 ) ( * * ) M2_M1_post
+  NEW metal4 640 ( 3040 -100 ) ( * 2160 ) ;
+- vdd
++ FIXED metal3 120 ( 1440 100 ) ( * * ) M4_M3_post
+  NEW metal2 120 ( 1440 100 ) ( * * ) M3_M2_post
+  NEW metal1 120 ( 1440 100 ) ( * * ) M2_M1_post
+  NEW metal4 640 ( 1440 -100 ) ( * 2160 ) ;
+END SPECIALNETS
+
+END DESIGN

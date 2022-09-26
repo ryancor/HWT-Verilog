@@ -1,0 +1,42 @@
+Qflow static timing analysis logfile created on Mon Sep 26 10:32:48 AM EDT 2022
+Creating example SDC file for timing
+Creating OpenSTA input file non_active_hwt.conf
+Running OpenSTA static timing analysis
+sta  < non_active_hwt.conf
+OpenSTA 2.0.17 GITDIR-NOT Copyright (c) 2019, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+OpenSTA> read_liberty -min /usr/local/share/qflow/tech/osu035_redm4/osu035_stdcells.lib
+OpenSTA> read_liberty -max /usr/local/share/qflow/tech/osu035_redm4/osu035_stdcells.lib
+Warning: /usr/local/share/qflow/tech/osu035_redm4/osu035_stdcells.lib, line 8 library osu035_stdcells already exists.
+OpenSTA> read_verilog non_active_hwt.rtlnopwr.v
+OpenSTA> link_design non_active_hwt
+OpenSTA> read_sdc non_active_hwt.sdc
+Warning: non_active_hwt.sdc, 1 port 'clock' not found.
+OpenSTA> check_setup
+Warning: There are 4 input ports missing set_input_delay.
+Warning: There is 1 output port missing set_output_delay.
+Warning: There is 1 unconstrained endpoint.
+OpenSTA> report_annotated_check
+                                                          Not   
+Check type                        Total    Annotated   Annotated
+----------------------------------------------------------------
+----------------------------------------------------------------
+                                      0           0           0
+OpenSTA> report_annotated_delay
+                                                          Not   
+Delay type                        Total    Annotated   Annotated
+----------------------------------------------------------------
+cell arcs                             8           0           8
+internal net arcs                     4           0           4
+net arcs from primary inputs          4           0           4
+net arcs to primary outputs           1           0           1
+----------------------------------------------------------------
+                                     17           0          17
+OpenSTA> report_checks -path_delay min_max -group_count 1000
+No paths found.
+OpenSTA> exit
+Saving command history

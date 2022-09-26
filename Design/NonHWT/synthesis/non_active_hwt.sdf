@@ -1,0 +1,27 @@
+(DELAYFILE
+   (SDFVERSION "3.0")
+   (DESIGN "non_active_hwt")
+   (DATE "10:32:49 Monday September 26, 2022")
+   (VENDOR "unknown")
+   (PROGRAM "qrouter")
+   (VERSION "unknown")
+   (DIVIDER /)
+   (TIMESCALE 1 ps)
+   (CELL
+      (CELLTYPE "non_active_hwt")
+      (INSTANCE)
+      (DELAY
+         (ABSOLUTE
+            (INTERCONNECT D _4_/A (0.000667199))
+            (INTERCONNECT _4_/Y _7_/C (4.69504e-05))
+            (INTERCONNECT C _5_/A (0.000372262))
+            (INTERCONNECT _5_/Y _7_/B (0.000150336))
+            (INTERCONNECT B _6_/A (0.000193024))
+            (INTERCONNECT A _6_/B (0.000209831))
+            (INTERCONNECT _6_/Y _7_/A (0.000210368))
+            (INTERCONNECT _7_/Y _8_/A (0.000290726))
+            (INTERCONNECT _8_/Y Y (0.000325442))
+         )
+      )
+   )
+)

@@ -1,0 +1,50 @@
+Qflow static timing analysis logfile created on Mon Sep 26 10:29:47 AM EDT 2022
+Converting qrouter output to vesta delay format
+Running rc2dly -r hwt.rc -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib -V /home/kali/Desktop/VLSI-Design/projects/HW_Trojans/HWT/synthesis/hwt.rtl.v
+-d hwt.dly
+Converting qrouter output to SDF delay format
+Running rc2dly -r hwt.rc -l /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib -V /home/kali/Desktop/VLSI-Design/projects/HW_Trojans/HWT/synthesis/hwt.rtl.v
+-d hwt.sdf
+Creating OpenSTA input file hwt.conf
+Running OpenSTA static timing analysis with back-annotated extracted wire delays
+sta  < hwt.conf
+OpenSTA 2.0.17 GITDIR-NOT Copyright (c) 2019, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+OpenSTA> read_liberty -min /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib
+OpenSTA> read_liberty -max /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib
+Warning: /usr/local/share/qflow/tech/osu035/osu035_stdcells.lib, line 8 library osu035_stdcells already exists.
+OpenSTA> read_verilog hwt.rtlnopwr.v
+OpenSTA> link_design hwt
+Warning: hwt.rtlnopwr.v, line 32 module FILL not found.  Creating black box for SFILL1520x100.
+OpenSTA> read_sdf hwt.sdf
+OpenSTA> read_sdc hwt_post.sdc
+Warning: hwt_post.sdc, 1 port 'clock' not found.
+Warning: hwt_post.sdc, 2 virtual clock clock can not be propagated.
+OpenSTA> check_setup
+Warning: There are 4 input ports missing set_input_delay.
+Warning: There is 1 output port missing set_output_delay.
+Warning: There is 1 unconstrained endpoint.
+OpenSTA> report_annotated_check
+                                                          Not   
+Check type                        Total    Annotated   Annotated
+----------------------------------------------------------------
+----------------------------------------------------------------
+                                      0           0           0
+OpenSTA> report_annotated_delay
+                                                          Not   
+Delay type                        Total    Annotated   Annotated
+----------------------------------------------------------------
+cell arcs                            12           0          12
+internal net arcs                     5           5           0
+net arcs from primary inputs          7           7           0
+net arcs to primary outputs           1           1           0
+----------------------------------------------------------------
+                                     25          13          12
+OpenSTA> report_checks -path_delay min_max -group_count 1000
+No paths found.
+OpenSTA> exit
+Saving command history

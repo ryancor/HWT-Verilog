@@ -1,0 +1,58 @@
+Starting new log file Mon Sep 26 10:32:19 2022
+
+LEF Read, Line 135: NOTE:  Old format VIARULE ignored.
+--------------------------------
+LEF Read, Line 136: NOTE:  Old format VIARULE ignored.
+Qflow project setup
+LEF Read, Line 140: NOTE:  Old format VIARULE ignored.
+--------------------------------
+LEF Read, Line 141: NOTE:  Old format VIARULE ignored.
+
+LEF Read, Line 151: NOTE:  Old format VIARULE ignored.
+Technology set to osu035_redm4 from existing qflow_vars.sh file
+LEF Read, Line 152: NOTE:  Old format VIARULE ignored.
+Regenerating files for existing project non_active_hwt
+LEF Read, Line 156: NOTE:  Old format VIARULE ignored.
+Qrouter detail maze router version 1.4.71.T
+LEF Read, Line 157: NOTE:  Old format VIARULE ignored.
+Reading LEF data from file /usr/local/share/qflow/tech/osu035_redm4/osu035_redm4_stdcells.lef.
+LEF Read, Line 167: NOTE:  Old format VIARULE ignored.
+LEF file:  Defines site corner (ignored)
+LEF Read, Line 168: NOTE:  Old format VIARULE ignored.
+LEF file:  Defines site IO (ignored)
+LEF Read, Line 172: NOTE:  Old format VIARULE ignored.
+LEF file:  Defines site core (ignored)
+LEF Read, Line 173: NOTE:  Old format VIARULE ignored.
+LEF read: Processed 3179 lines.
+LEF Read: encountered 0 errors and 12 warnings total.
+Running vlog2Cel to generate input files for graywolf
+vlog2Cel  -l  /usr/local/share/qflow/tech/osu035_redm4/osu035_redm4_stdcells.lef -u 100 -o /home/kali/Desktop/VLSI-Design/projects/HW_Trojans/NonHWT/layout/non_active_hwt.cel /home/kali/Desktop/VLSI-Design/projects/HW_Trojans/NonHWT/synthesis/non_active_hwt.rtlnopwr.v
+No non_active_hwt.cel1 file found for project. . . no partial blockages to apply to layout.
+No non_active_hwt.cel2 file found for project. . . continuing without pin placement hints
+Running GrayWolf placement
+graywolf  non_active_hwt
+Running getantennacell to determine cell to use for antenna anchors.
+getantennacell.tcl non_active_hwt  /usr/local/share/qflow/tech/osu035_redm4/osu035_redm4_stdcells.lef
+Running getfillcell to determine cell to use for fill.
+getfillcell.tcl non_active_hwt  /usr/local/share/qflow/tech/osu035_redm4/osu035_redm4_stdcells.lef FILL
+
+--------------------------------
+Qflow project setup
+--------------------------------
+
+Technology set to osu035_redm4 from existing qflow_vars.sh file
+Regenerating files for existing project non_active_hwt
+Warning:  No migration logfile found.
+Running netgen
+netgen -batch lvs "non_active_hwt.spice non_active_hwt" "/home/kali/Desktop/VLSI-Design/projects/HW_Trojans/NonHWT/synthesis/non_active_hwt.spc non_active_hwt" /usr/local/share/qflow/tech/osu035_redm4/osu035_redm4_setup.tcl comp.out -json -blackbox
+NETGEN-6.2-dev
+Developed by Joachim Schoeberl at
+2010-xxxx Vienna University of Technology
+2006-2010 RWTH Aachen University
+1996-2006 Johannes Kepler University Linz
+Including OpenCascade geometry kernel
+Including MPI version 3.1
+optfile ./ng.opt does not exist - using default values
+togl-version : 2
+OCC module loaded
+Errors in synthesis flow, qflow status = 1

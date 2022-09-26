@@ -1,0 +1,26 @@
+* NGSPICE file created from non_active_hwt.ext - technology: scmos
+
+* Black-box entry subcircuit for BUFX2 abstract view
+.subckt BUFX2 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for AOI21X1 abstract view
+.subckt AOI21X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NAND2X1 abstract view
+.subckt NAND2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for INVX1 abstract view
+.subckt INVX1 A gnd Y vdd
+.ends
+
+.subckt non_active_hwt A B C D Y
+X_8_ _8_/A _8_/gnd Y _8_/vdd BUFX2
+X_7_ _7_/A _7_/B _7_/C _8_/gnd _8_/A _8_/vdd AOI21X1
+X_6_ B A _8_/gnd _7_/A _8_/vdd NAND2X1
+X_5_ C _8_/gnd _7_/B _8_/vdd INVX1
+X_4_ D _8_/gnd _7_/C _8_/vdd INVX1
+.ends
+

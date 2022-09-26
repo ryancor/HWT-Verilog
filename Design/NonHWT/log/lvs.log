@@ -1,0 +1,16 @@
+Qflow LVS logfile created on Mon Sep 26 10:32:51 AM EDT 2022
+netgen -batch lvs "non_active_hwt.spice non_active_hwt" "/home/kali/Desktop/VLSI-Design/projects/HW_Trojans/NonHWT/synthesis/non_active_hwt.spc non_active_hwt" /usr/local/share/qflow/tech/osu035_redm4/osu035_redm4_setup.tcl comp.out -json -blackbox
+NETGEN-6.2-dev
+Developed by Joachim Schoeberl at
+2010-xxxx Vienna University of Technology
+2006-2010 RWTH Aachen University
+1996-2006 Johannes Kepler University Linz
+Including OpenCascade geometry kernel
+Including MPI version 3.1
+optfile ./ng.opt does not exist - using default values
+togl-version : 2
+OCC module loaded
+Thank you for using NETGEN
+netgen failure:  No file comp.out.
+Premature exit.
+Synthesis flow stopped due to error condition.

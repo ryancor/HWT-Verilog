@@ -1,0 +1,114 @@
+[
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "non_hwt",
+      "non_hwt"
+   ],
+   "devices": [
+       [
+         ["BUFX2", 1],
+         ["AOI21X1", 1],
+         ["NAND2X1", 1],
+         ["INVX1", 2 ]
+       ], [
+         ["BUFX2", 1 ],
+         ["AOI21X1", 1 ],
+         ["NAND2X1", 1 ],
+         ["INVX1", 2 ]
+       ]
+   ],
+   "nets": [
+    11,
+    11
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "B",
+        "A",
+        "Y",
+        "D",
+        "C",
+        "(no matching pin)",
+        "(no matching pin)"
+      ], [
+        "B",
+        "A",
+        "Y",
+        "D",
+        "C",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  }
+]
